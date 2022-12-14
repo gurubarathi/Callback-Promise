@@ -29,12 +29,12 @@
 	//***************promise *********// 
 	 
 	   var promise = new Promise(function(resolve, reject) {
-		reject('Promise Rejected')
+		resolve('successMessage')
 	})
 	   
 	promise
 		.then(function(successMessage) {
-			console.log(successMessage);
+			console.log("succeed");
 		})
 		.catch(function(errorMessage) {
 			console.log(errorMessage);
