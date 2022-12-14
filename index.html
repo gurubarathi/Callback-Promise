@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+    /*******callback function ******/
+  
+		// function
+	function greet(name, callback) {
+		console.log('Hi' + ' ' + name);
+		callback();
+	}
+
+	// callback function
+	function callMe() {
+		console.log('this is callback function');
+	}
+
+	// passing function as an argument
+	greet('guru', callMe);
+    
+
+	
+	//***************promise *********// 
+	 
+	   var promise = new Promise(function(resolve, reject) {
+		reject('Promise Rejected')
+	})
+	   
+	promise
+		.then(function(successMessage) {
+			console.log(successMessage);
+		})
+		.catch(function(errorMessage) {
+			console.log(errorMessage);
+		});
+
+  </script>
+</body>
+</html>
